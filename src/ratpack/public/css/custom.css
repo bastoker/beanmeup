@@ -5,6 +5,9 @@
   margin-top: 4rem;
   text-align: center;
 }
+.footer-notes {
+  text-align: center;
+}
 .header {
   margin-top: 4rem;
 }
@@ -24,7 +27,6 @@
     height: auto;
 }
 
-
 .logo-wrapper {
   display: block;
   position: relative;
@@ -33,10 +35,8 @@
   border: 0px solid #eee;
   }
 .logo {
-  width: 100%;
-  height: auto; }
-
-
+  width: 300px;
+}
 
 /* Larger than phone */
 @media (min-width: 550px) {
