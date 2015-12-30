@@ -1,0 +1,31 @@
+{{> _header.html}}
+
+<div class="container">
+    <section class="header">
+        <div class="row">
+            <div class="ten columns">
+                <h2>Maak je presentatie</h2>
+            </div>
+        </div>
+    </section>
+
+    <form action="/maak" method="post">
+        <div class="row">
+            <div class="six columns">
+                <label for="scriptInput">Script</label>
+                <textarea class="script-input u-full-width" rows="12" id="scriptInput">{{script}}</textarea>
+            </div>
+            <div class="six columns">
+                <label for="scriptInput">Opties</label>
+                <label>
+                    <input type="checkbox" checked="y">
+                    <span class="label-body">Start met een lege slide</span>
+                </label>
+            </div>
+        </div>
+        <input class="button-primary" type="submit" value="Maak presentatie"/>
+        <p>&nbsp;</p>
+        <hr/>
+    </form>
+</div>
+{{> _footer.html}}
