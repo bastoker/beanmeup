@@ -1,0 +1,33 @@
+plugins {
+    id 'com.bmuschko.docker-java-application' version '2.6.1'
+    id 'io.ratpack.ratpack-java' version '1.1.1'
+    id 'idea'    
+}
+
+repositories {
+  jcenter()
+}
+
+dependencies {
+  runtime 'org.slf4j:slf4j-simple:1.7.12'
+
+  compile ratpack.dependency('handlebars')
+}
+
+mainClassName = "nl.beanmeup.Main"
+
+docker {    
+    url = project.hasProperty('dockerUrl') ?
+                project.getProperty('dockerUrl') : 'https://192.168.99.100:2376'
+
+    certPath = project.hasProperty('dockerCertPath') ?
+                new File(project.getProperty('dockerCertPath')) :
+                new File(System.properties['user.home'], '.docker/machine/machines/default')
+
+    // Configuration for Java application image.
+    javaApplication {
+        baseImage = 'anapsix/alpine-java:jre8'
+        maintainer = "Bas Stoker <bastoker>"       
+        port = 5050
+    }
+}
