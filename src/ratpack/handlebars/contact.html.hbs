@@ -1,0 +1,42 @@
+{{> _header.html}}
+
+    <div class="container">
+        <div class="row">
+            <div class="one-half column" style="margin-top: 25%">
+                <h3>Bean me up</h3>
+                <p>Log hier in op de website.</p>
+                <p>
+                    Heb je nog geen account, neem dan contact met ons op: <a href="/contact.html">Contact</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Always wrap checkbox and radio inputs in a label and use a <span class="label-body"> inside of it -->
+            <!-- Note: The class .u-full-width is just a utility class shorthand for width: 100% -->
+            <form>
+                <div class="row">
+                    <div class="six columns">
+                        <label for="exampleEmailInput">Emailadres</label>
+                        <input class="u-full-width" type="email" placeholder="naam@mailbox.nl" id="exampleEmailInput">
+                    </div>
+                    <div class="six columns">
+                        <label for="exampleRecipientInput">Vraag</label>
+                        <select class="u-full-width" id="exampleRecipientInput">
+                            <option value="Option 1">Ik wil een account aanvragen</option>
+                            <option value="Option 2">Ik ben mijn wachtwoord vergeten</option>
+                        </select>
+                    </div>
+                </div>
+                <label for="exampleMessage">Bericht</label>
+                <textarea class="u-full-width" placeholder="Hallo..." id="exampleMessage"></textarea>
+                <label class="example-send-yourself-copy">
+                    <input type="checkbox">
+                    <span class="label-body">Zelf een kopie ontvangen</span>
+                </label>
+                <input class="button-primary" type="submit" value="Versturen">
+            </form>
+        </div>
+    </div>
+
+{{> _footer.html}}

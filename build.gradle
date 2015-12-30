@@ -10,8 +10,9 @@ repositories {
 
 dependencies {
   runtime 'org.slf4j:slf4j-simple:1.7.12'
-
   compile ratpack.dependency('handlebars')
+  compile ratpack.dependency('session')
+  compile ratpack.dependency("guice")
 }
 
 mainClassName = "nl.beanmeup.Main"
@@ -24,7 +25,6 @@ docker {
                 new File(project.getProperty('dockerCertPath')) :
                 new File(System.properties['user.home'], '.docker/machine/machines/default')
 
-    // Configuration for Java application image.
     javaApplication {
         baseImage = 'anapsix/alpine-java:jre8'
         maintainer = "Bas Stoker <bastoker>"       
