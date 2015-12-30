@@ -1,4 +1,4 @@
-Weblog van Andre de Bruijn
+Site beanmeup.nl
 -----------------------------
 
-http://andredebruijn.nl
+http://beanmeup.nl
